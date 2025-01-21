@@ -4,7 +4,7 @@ let bullets = [];
 let score = 0;
 let canvas;
 let lastShotTime = 0;
-const shotDelay = 300; // 0.5 second delay in milliseconds
+const shotDelay = 300; // 0.3 second delay in milliseconds
 
 
 function setup() {
@@ -25,7 +25,7 @@ function draw() {
   fill(0);
 
   textSize(16);
-  text('Ovládání: Šipky vlevo/vpravo - pohyb, Mezerník - střelba', 10, 20);
+  text('Ovládání: Šipky vlevo/vpravo - pohyb, Mezerník - střelba', 20, 20);
 
   // Zombies
   for (let i = zombies.length - 1; i >= 0; i--) {
