@@ -8,7 +8,7 @@ const shotDelay = 300; // 0.5 second delay in milliseconds
 
 
 function setup() {
-  canvas = createCanvas(800, 1000);
+  canvas = createCanvas(800, 900);
   canvas.position((windowWidth - width) / 2, (windowHeight - height) / 2);
   canvas.style('background-color', 'transparent'); // Nastavíme průhledné pozadí canvasu
   for (let i = 0; i < 5; i++) { // Přidáme více zombíků
