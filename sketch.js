@@ -4,7 +4,7 @@ let bullets = [];
 let score = 0;
 let canvas;
 let lastShotTime = 0;
-const shotDelay = 0; // 0.3 second delay in milliseconds
+const shotDelay = 1; // 0.3 second delay in milliseconds
 
 
 function setup() {
