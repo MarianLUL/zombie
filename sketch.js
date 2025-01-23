@@ -167,4 +167,4 @@ class Bullet {
 }
 
 
-console.log('Počet střel:', bullets.length);
+
