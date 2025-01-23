@@ -77,6 +77,9 @@ function keyPressed() {
 }
 
 function keyReleased() {
+   if (key === ' ') {
+    lastShotTime = 0;
+   }
   if (keyCode === LEFT_ARROW && player.dir === -1) {
     player.setDir(0);
   } else if (keyCode === RIGHT_ARROW && player.dir === 1) {
