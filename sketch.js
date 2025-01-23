@@ -154,6 +154,7 @@ class Bullet {
   update() {
     this.y -= 5;  // Pohyb střely směrem nahoru
   }
+  console.log('Počet střel:', bullets.length);
 
   hits(zombie) {
     let d = dist(this.x, this.y, zombie.x, zombie.y);  // Vzdálenost mezi střelou a zombíkem
