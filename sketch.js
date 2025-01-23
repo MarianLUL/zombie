@@ -59,7 +59,10 @@ function draw() {
       }
     }
   }
-
+  
+// Zobrazení počtu střel
+  console.log('Počet kůlek:', bullets.length);
+  
   // Zobrazení skóre
   fill(0);
   textSize(24);
