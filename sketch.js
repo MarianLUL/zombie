@@ -18,6 +18,26 @@ function setup() {
   document.body.style.backgroundColor = 'black';  // Nastavení pozadí stránky na černou barvu
 }
 
+let zombies = []; // Pole pro uložení všech zombíků ve hře
+let player;       // Objekt hráče
+let bullets = []; // Pole pro uložení všech střel
+let score = 0;    // Skóre hráče
+let canvas;
+let lastShotTime = 0;  // Čas posledního výstřelu
+const shotDelay = 99;  // Prodleva mezi výstřely v milisekundách (0.099 sekund)
+
+function setup() {
+  canvas = createCanvas(800, 900);  // Nastavení velikosti herního prostoru
+  canvas.position((windowWidth - width) / 2, (windowHeight - height) / 2);  // Centrované umístění canvasu
+  canvas.style('background-color', 'transparent');  // Průhledné pozadí canvasu
+
+  for (let i = 0; i < 5; i++) {  // Vytvoření úvodních pěti zombíků
+    zombies.push(new Zombie());
+  }
+  player = new Player();  // Vytvoření objektu hráče
+  document.body.style.backgroundColor = 'black';  // Nastavení pozadí stránky na černou barvu
+}
+
 function draw() {
   background(50, 205, 50);  // Zelené pozadí (trávník)
 
@@ -154,7 +174,7 @@ class Bullet {
   update() {
     this.y -= 5;  // Pohyb střely směrem nahoru
   }
-  
+
   hits(zombie) {
     let d = dist(this.x, this.y, zombie.x, zombie.y);  // Vzdálenost mezi střelou a zombíkem
     return d < this.w + zombie.r;  // Kontrola, zda došlo k zásahu
@@ -165,6 +185,3 @@ class Bullet {
     rect(this.x, this.y, this.w, this.h);
   }
 }
-
-
-
