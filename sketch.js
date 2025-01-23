@@ -66,7 +66,7 @@ function draw() {
 
 function keyPressed() {
   if (key === ' ' && millis() - lastShotTime > shotDelay) {
-    bullets.hold(new Bullet(player.x + player.w / 2, player.y));
+    bullets.press(new Bullet(player.x + player.w / 2, player.y));
     lastShotTime = millis();
   }
   if (keyCode === LEFT_ARROW) {
