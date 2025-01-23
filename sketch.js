@@ -9,7 +9,7 @@ const shotDelay = 99;  // Prodleva mezi výstřely v milisekundách (0.099 sekun
 function setup() {
   canvas = createCanvas(800, 900);  // Nastavení velikosti herního prostoru
   canvas.position((windowWidth - width) / 2, (windowHeight - height) / 2);  // Centrované umístění canvasu
-  canvas.style('background-color', 'transparent');  // Průhledné pozadí canvasu
+  
 
   for (let i = 0; i < 5; i++) {  // Vytvoření úvodních pěti zombíků
     zombies.push(new Zombie());
